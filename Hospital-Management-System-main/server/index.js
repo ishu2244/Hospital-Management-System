@@ -20,7 +20,10 @@ import labRoutes from './src/modules/lab/lab.routes.js';
 const app = express();
 
 app.use(helmet());
-app.use(cors({ origin: '*', credentials: true }));
+app.use(cors({
+  origin: 'https://hospital-management-system-smoky-omega.vercel.app',
+  credentials: true
+}));
 app.use(express.json());
 
 app.get('/', (req, res) => {

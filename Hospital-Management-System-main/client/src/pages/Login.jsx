@@ -101,7 +101,6 @@ const Login = () => {
           overflow: "hidden",
         }}
       >
-        {/* 🔵 BETTER BLUE WAVE */}
         <Box
           sx={{
             position: "absolute",

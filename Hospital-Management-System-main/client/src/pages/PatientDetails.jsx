@@ -120,7 +120,7 @@ const PatientDetails = () => {
 
   return (
     <Box sx={bg}>
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" sx={{ mt: 6 }}>
 
         {/* 🔥 HEADER WITH BACK BUTTON */}
         <Box

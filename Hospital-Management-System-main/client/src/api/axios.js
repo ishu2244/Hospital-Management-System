@@ -2,7 +2,10 @@ import axios from 'axios';
 
 // Use environment variable for API URL (set in Vercel) or fallback to localhost
 // Automatically append /api if not present
-let baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const baseURL =
+  window.location.hostname === "localhost"
+    ? "http://localhost:5000/api"
+    : "https://hospital-management-system-97zx.onrender.com/api";
 
 // Ensure baseURL ends with /api
 if (!baseURL.endsWith('/api')) {

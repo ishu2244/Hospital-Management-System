@@ -134,7 +134,16 @@ const RegisterPatient = () => {
 
   return (
     <Box sx={bg}>
-      <Container maxWidth="md">
+ <Container
+  maxWidth="md"
+  sx={{
+    mt: {
+      xs: 8,   // mobile
+      sm: 8,   // tablet
+      md: 5,   // desktop
+    },
+  }}
+>
 
         <motion.div variants={containerAnim} initial="hidden" animate="show">
           <Paper sx={card}>

@@ -116,6 +116,7 @@ const PatientList = () => {
       field: "action",
       headerName: "Action",
       flex: 0.7,
+        minWidth: 100,
       sortable: false,
       renderCell: (params) => (
         <Button
@@ -131,7 +132,7 @@ const PatientList = () => {
 
   return (
     <Box sx={bg}>
-      <Container maxWidth="xl">
+     <Container maxWidth="xl" sx={{ mt: 6 }}>
         <Paper sx={{ ...card, p: 3 }}>
 
           {/* 🔥 HEADER WITH BACK BUTTON */}

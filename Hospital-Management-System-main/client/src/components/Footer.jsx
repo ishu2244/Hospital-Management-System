@@ -6,17 +6,11 @@ import {
   IconButton,
   Button,
 } from "@mui/material";
-import {
-  Facebook,
-  Instagram,
-  LinkedIn,
-  Email,
-} from "@mui/icons-material";
+import { Facebook, Instagram, LinkedIn, Email } from "@mui/icons-material";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-            import MonitorHeartIcon from "@mui/icons-material/MonitorHeart";
+import MonitorHeartIcon from "@mui/icons-material/MonitorHeart";
 
-            
 const Footer = () => {
   const navigate = useNavigate();
 
@@ -44,39 +38,40 @@ const Footer = () => {
 
       <Container maxWidth="lg" sx={{ position: "relative" }}>
         <Grid container spacing={5}>
-          
           {/* BRAND */}
           <Grid item xs={12} md={4}>
-            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+            >
+              <Box
+                onClick={() => navigate("/")}
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                  cursor: "pointer",
+                  mb: 2,
+                }}
+              >
+                <MonitorHeartIcon sx={{ color: "#0072ff", fontSize: 28 }} />
 
-<Box
-  onClick={() => navigate("/")}
-  sx={{
-    display: "flex",
-    alignItems: "center",
-    gap: 1,
-    cursor: "pointer",
-    mb: 2,
-  }}
->
-  <MonitorHeartIcon sx={{ color: "#0072ff", fontSize: 28 }} />
-
-  <Typography
-    sx={{
-      fontWeight: 900,
-      fontSize: "20px",
-      background: "linear-gradient(45deg,#00c6ff,#0072ff)",
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
-    }}
-  >
-    HMS
-  </Typography>
-</Box>
+                <Typography
+                  sx={{
+                    fontWeight: 900,
+                    fontSize: "20px",
+                    background: "linear-gradient(45deg,#00c6ff,#0072ff)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  HMS
+                </Typography>
+              </Box>
 
               <Typography sx={{ color: "#6b7280", mb: 2 }}>
-                Smart hospital management system designed to simplify
-                healthcare operations with modern technology.
+                Smart hospital management system designed to simplify healthcare
+                operations with modern technology.
               </Typography>
 
               {/* MINI CTA */}
@@ -104,7 +99,10 @@ const Footer = () => {
 
           {/* LINKS */}
           <Grid item xs={6} md={4}>
-            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+            >
               <Typography
                 variant="h6"
                 sx={{ mb: 2, color: "#1e3a8a", fontWeight: 700 }}
@@ -112,30 +110,39 @@ const Footer = () => {
                 Quick Links
               </Typography>
 
-              {["Home", "Features", "Contact"].map((item, i) => (
-                <Typography
-                  key={i}
-                  sx={{
-                    mb: 1,
-                    color: "#6b7280",
-                    cursor: "pointer",
-                    transition: "0.3s",
+           {[
+  { label: "Home", path: "/" },
+  { label: "Features", path: "/features" },
+  { label: "About", path: "/about" },
+  { label: "Contact", path: "/contact" },
+].map((item, i) => (
+  <Typography
+    key={i}
+    onClick={() => navigate(item.path)}
+    sx={{
+      mb: 1,
+      color: "#6b7280",
+      cursor: "pointer",
+      transition: "0.3s",
 
-                    "&:hover": {
-                      color: "#0072ff",
-                      transform: "translateX(6px)",
-                    },
-                  }}
-                >
-                  {item}
-                </Typography>
-              ))}
+      "&:hover": {
+        color: "#0072ff",
+        transform: "translateX(6px)",
+      },
+    }}
+  >
+    {item.label}
+  </Typography>
+))}
             </motion.div>
           </Grid>
 
           {/* CONTACT */}
           <Grid item xs={6} md={4}>
-            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+            >
               <Typography
                 variant="h6"
                 sx={{ mb: 2, color: "#1e3a8a", fontWeight: 700 }}
